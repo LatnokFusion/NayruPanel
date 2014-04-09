@@ -1,6 +1,8 @@
 <?php 
 
 include('database.php');
+$user = 'Demo';
+echo "<script> username = '".$user."'; </script>";
 
 ?>
 

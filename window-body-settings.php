@@ -1,7 +1,8 @@
 <center><h2>Settings</h2>
 
-<div id='window-settings-wallpaper' style="width:90%;height:30px;overflow:auto;font-size='20px';">
-<button onclick="wsw = document.getElementById('window-settings-wallpaper'); if ( wsw.style.height == '30px' ) { wsw.style.height = '90%' } else { wsw.style.height = '30px'; };">Change Wallpaper</button>
+<button onclick="wsw = document.getElementById('window-settings-wallpaper'); if ( wsw.style.height == '0px' ) { wsw.style.height = '90%' } else { wsw.style.height = '0px'; };">Change Wallpaper</button>
+<div id='window-settings-wallpaper' style="width:90%;height:0px;overflow:auto;font-size='20px';">
+
 <?php 
 include('database.php');
 $sql = "SELECT * FROM wallpapers ORDER BY ID ASC";
@@ -14,8 +15,8 @@ foreach ($dbh->query($sql) as $row)
 ?>
 </div>
 
-<div id='window-settings-color' style="width:90%;height:30px;overflow:auto;font-size='20px';">
-<button onclick="wsc = document.getElementById('window-settings-color'); if ( wsc.style.height == '30px' ) { wsc.style.height = '90%' } else { wsc.style.height = '30px'; };">Change Color Scheme</button>
+<button onclick="wsc = document.getElementById('window-settings-color'); if ( wsc.style.height == '0px' ) { wsc.style.height = '90%' } else { wsc.style.height = '0px'; };">Change Color Scheme</button>
+<div id='window-settings-color' style="width:90%;height:0px;overflow:auto;font-size='20px';">
 <?php 
 include('database.php');
 $sql = "SELECT * FROM colors ORDER BY ID ASC";

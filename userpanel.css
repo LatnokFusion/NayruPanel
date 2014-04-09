@@ -4,13 +4,14 @@ body {
 }
 
 .login-main {
+	display: none;
 	background-color:black;
 	visibility:visible;
-	height:99%;
-	width:99%;
+	height:100%;
+	width:100%;
 	background-color:#000000;
 	background-image:url("http://www.thezeldaproject.net/images/stories/photoSets/lonLonRanch/lonlonranch_05.jpg");
-	background-size: 100%;
+	background-size: 100% auto;
 	background-position:center; 
 	background-repeat:no-repeat;
 	position:absolute;
@@ -43,14 +44,16 @@ a:link, a:active, a:visited, a.navbar:link, a.navbar:active, a.navbar:visited, a
 	z-index:2;
 	visibility:visible;
 	overflow:hidden;
+	display: none;
 	background-color: rgba(0, 0, 0, 0.5); /* Color white with alpha 0.9*/
 }
 
 .login{
+	display:none;
 	color:white;
 	font-size:20px;
 	width:30%;
-	height:55%;
+	height:35%;
 	top:15%;
 	left:15%;
 	background-color:#0066ff;
@@ -61,15 +64,16 @@ a:link, a:active, a:visited, a.navbar:link, a.navbar:active, a.navbar:visited, a
 }
 
 .status{
+	display:none;
 	color:white;
 	font-size:20px;
 	width:20%;
 	height:30%;
-	top:30%;
+	top:-11%;
 	left:40%;
 	background-color:#0066ff;
 	z-index:2;
-	visibility:hidden;
+	visibility:visible;
 	overflow:hidden;
 	background-color: rgba(0, 0, 0, 0.5); /* Color white with alpha 0.9*/
 }
@@ -86,21 +90,23 @@ a:link, a:active, a:visited, a.navbar:link, a.navbar:active, a.navbar:visited, a
 }
 
 .clock{
-	top: 0;
-	left: 10%;
-	width: 60%;
+	display:none;
+	top: 90%;
+	left: 160px;
+	width: calc(70% - 160px);
 	height: 10%;
 	position:absolute;
 	overflow:hidden;
 	background-color: rgba(0, 102, 255, 0.5);
-	text-align: right;
+	text-align: center;
 	z-index:1;
 }
 
 .header{
+	display:none;
 	width:30%;
 	height:10%;
-	top:0;
+	top:90%;
 	left:70%;
 	position:absolute;
 	overflow:hidden;
@@ -108,9 +114,8 @@ a:link, a:active, a:visited, a.navbar:link, a.navbar:active, a.navbar:visited, a
 	z-index:1;
 }
 
-
-
 .button {
+
 	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
 	box-shadow:inset 0px 1px 0px 0px #97c4fe;
@@ -144,6 +149,7 @@ a:link, a:active, a:visited, a.navbar:link, a.navbar:active, a.navbar:visited, a
 	text-align:center;
 	text-shadow:1px 1px 0px #1570cd;
 }
+
 .button:hover {
 	background:-moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
@@ -154,7 +160,8 @@ a:link, a:active, a:visited, a.navbar:link, a.navbar:active, a.navbar:visited, a
 }
 
 .nav{
-	width:10%;
+	display:none;
+	width:160px;
 	height:100%;
 	top:0%;
 	left:0%;
@@ -170,11 +177,12 @@ a:link, a:active, a:visited, a.navbar:link, a.navbar:active, a.navbar:visited, a
 }
 
 #navmod {
+	display:none;
 	width:36px;
 	height:35px;
 	top:50%;
 	overflow:hidden;
-	left:10%;
+	left:0%;
 	visibility:visible;
 	position:absolute;
 	z-index:30;
@@ -182,9 +190,10 @@ a:link, a:active, a:visited, a.navbar:link, a.navbar:active, a.navbar:visited, a
 }
 
 .main{
+	display:none;
 	background-image:url("http://autoimagesize.com/wp-content/uploads/2014/03/wallpapers-programming-language-triforce-symbol-1920x1080-games-images-triforce-wallpaper.jpg");	
 	/* background-image:url("http://www.20cents-video.com/userdata/animated-gif/library/matrix.gif"); */
-	background-size: 100%;
+	background-size: cover;
 	background-position:center; 
 	background-repeat:no-repeat;
 	width:100%;
@@ -193,7 +202,6 @@ a:link, a:active, a:visited, a.navbar:link, a.navbar:active, a.navbar:visited, a
 	left:0%;
 	position:absolute;
 	background-color:black;
-	padding-top:5%;
 	z-index:0;
 }
 

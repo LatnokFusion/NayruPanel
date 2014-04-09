@@ -1,0 +1,1 @@
+<iframe src='phpmyadmin/' width='99%' height='99%'></iframe>

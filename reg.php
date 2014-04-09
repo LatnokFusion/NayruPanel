@@ -27,12 +27,12 @@ $rows = $result->fetch(PDO::FETCH_NUM);
 if($rows > 0) {
 //header("location: index.php");
 echo "0";
-}
+} else { echo "1"; }
 if($errflag) {
-	$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
-	session_write_close();
+	//$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 	//header("location: login.php");
-	echo "1";
+	echo "2";
+	session_write_close();
 	exit();
 }
  

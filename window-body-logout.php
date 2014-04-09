@@ -5,6 +5,6 @@
 <br>
 <h1>Do you really want to log out?<br>
 
-<button onclick="
-window.location = 'login.php'">Yes</button><button onclick="closewindow('logout');">No</button>
+<button onclick="logout()">
+Yes</button><button onclick="closewindow('logout');">No</button>
 </h1>

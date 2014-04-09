@@ -12,6 +12,16 @@ var width = [];
 var left = [];
 var height = [];
 
+function sqlRequest(userid, mode, col, value) 
+{
+	$.ajax({
+	  url: 'database.php',
+	  data: {userid: userid, mode: mode, col: col, value: value},
+	  type: 'POST'
+	  //dataType: 'JSON'
+	});
+}
+
 function setStyle(color, textcolor, navbg)
 {
 	//alert(navbg);
@@ -26,6 +36,7 @@ function setStyle(color, textcolor, navbg)
 	$('.windowtitle').css('background-color', color);
 	$('.button').css('color', textcolor);
 	$('.button').css('background-color', color);
+	
 }
 
 function createWindow(window, src) 
@@ -213,11 +224,16 @@ function togglewindow(window)
 	}
 }		
 
+function logout() 
+{
+document.getElementById('body-status').innerHTML=def+'Logging out...'; $('#window-logout').fadeOut(1000);$('#window-status').fadeIn(1000, function() {$('#main').fadeOut(1000); $('#header').fadeOut(1000); $('#clock').fadeOut(1000); $('#navmod').fadeOut(1000);  $('#nav').fadeOut(1000, function () { $('#window-status').fadeOut(1000, function() {window.location = 'login.php';})})})
+}
+
 function navmod() 
 {
 	if ( navstat == 'open' ) {
 		navstat = 'closed';
-		$("#nav").animate({ left: '-10%' });
+		$("#nav").animate({ left: '-160px' });
 		$("#navmod").animate({ left: '0%' });
 
 		$("#clock").animate({ width: '70%', left: '0%' });
@@ -225,9 +241,8 @@ function navmod()
 	} else {
 		navstat = 'open';
 		$("#nav").animate({ left: '0%' });
-		$("#navmod").animate({ left: '10%'});
-
-		$("#clock").animate({ width: '60%', left: '10%' });
+		$("#clock").animate({ width: $("#clock").width() - 160, left: '160px' });
+		$("#navmod").animate({ left: '160px' });
 
 	}
 }
